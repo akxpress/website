@@ -112,63 +112,66 @@ const About = () => {
         <div className={`mt-20 transition-all duration-1000 delay-800 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
-          <div className="bg-gradient-to-br from-navy-900 to-navy-800 rounded-2xl p-8 lg:p-12 text-white">
-            <h3 className="text-2xl lg:text-3xl font-bold mb-8 text-center">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl lg:text-3xl font-bold text-navy-900 mb-4">
               Why Choose ACE?
             </h3>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-              {[
-                {
-                  title: 'Proven Expertise',
-                  description: '75+ years of combined leadership in finance and consulting.'
-                },
-                {
-                  title: 'Trusted by Blue-Chip Organizations',
-                  description: 'We\'ve operated at the highest levels of industry.'
-                },
-                {
-                  title: 'Technology-Driven',
-                  description: 'Leveraging the latest tools for accuracy, speed, and security.'
-                },
-                {
-                  title: 'End-to-End Services',
-                  description: 'From bookkeeping to boardroom advice, we\'ve got you covered.'
-                },
-                {
-                  title: 'Client-Centric',
-                  description: 'We treat your business like our own, ensuring personalized, responsive service.'
-                }
-              ].map((item, index) => (
-                <div
-                  key={item.title}
-                  className={`flex items-start space-x-4 transition-all duration-700 ${
-                    isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
-                  }`}
-                  style={{ 
-                    transitionDelay: isVisible ? `${1000 + index * 150}ms` : '0ms'
-                  }}
-                >
+            <div className="w-24 h-1 bg-gold-500 mx-auto"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {[
+              {
+                title: 'Proven Expertise',
+                description: '75+ years of combined leadership in finance and consulting.'
+              },
+              {
+                title: 'Trusted by Blue-Chip Organizations',
+                description: 'We\'ve operated at the highest levels of industry.'
+              },
+              {
+                title: 'Technology-Driven',
+                description: 'Leveraging the latest tools for accuracy, speed, and security.'
+              },
+              {
+                title: 'End-to-End Services',
+                description: 'From bookkeeping to boardroom advice, we\'ve got you covered.'
+              },
+              {
+                title: 'Client-Centric',
+                description: 'We treat your business like our own, ensuring personalized, responsive service.'
+              }
+            ].map((item, index) => (
+              <div
+                key={item.title}
+                className={`bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+                style={{ 
+                  transitionDelay: isVisible ? `${1000 + index * 150}ms` : '0ms'
+                }}
+              >
+                <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 mt-1">
-                    <CheckCircle className="w-6 h-6 text-gold-400" />
+                    <CheckCircle className="w-6 h-6 text-gold-500" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg mb-2">{item.title}</h4>
-                    <p className="text-gray-200 leading-relaxed">{item.description}</p>
+                    <h4 className="font-semibold text-lg text-navy-900 mb-2">{item.title}</h4>
+                    <p className="text-gray-600 leading-relaxed">{item.description}</p>
                   </div>
                 </div>
-              ))}
-            </div>
-            
-            <div className={`text-center lg:text-left transition-all duration-700 delay-1000 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}>
-              <p className="text-lg text-gray-200 leading-relaxed border-t border-navy-700 pt-8">
-                At ACE Global Corporate Services, we're not just service providers—we're your partners in growth. 
-                With accuracy, credibility, and efficiency at the core of everything we do, we empower businesses 
-                to thrive in today's complex and competitive environment.
-              </p>
-            </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className={`bg-gray-50 rounded-xl p-8 text-center transition-all duration-700 delay-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}>
+            <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
+              At ACE Global Corporate Services, we're not just service providers—we're your partners in growth. 
+              With accuracy, credibility, and efficiency at the core of everything we do, we empower businesses 
+              to thrive in today's complex and competitive environment.
+            </p>
           </div>
         </div>
       </div>
